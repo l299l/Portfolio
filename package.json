@@ -1,8 +1,9 @@
 {
+  "scripts": {
+    "build": "tailwindcss -i ./src/l299l/portfolio/css/style.css -o ./dist/output.css",
+    "watch": "tailwindcss -i ./src/l299l/portfolio/css/style.css -o ./dist/output.css --watch"
+  },
   "devDependencies": {
     "tailwindcss": "^3.3.1"
-  },
-  "dependencies": {
-    "bootstrap-icons": "^1.10.4"
   }
 }
