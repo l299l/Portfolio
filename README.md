@@ -7,6 +7,8 @@
   Competitive programmer and participant in the <strong>Polish Olympiad in Informatics</strong>.<br>
 </p>
 
+🌐 **Portfolio:** [l299l.github.io/Portfolio](https://l299l.github.io/Portfolio)
+
 ---
 
 ### 🚀 Featured Project
