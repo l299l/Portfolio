@@ -80,6 +80,13 @@ const DISCORD_WEBHOOK_URL = "__DISCORD_WEBHOOK_URL__";
             }]
         };
 
+        if (!DISCORD_WEBHOOK_URL || !DISCORD_WEBHOOK_URL.startsWith("https://discord.com/api/webhooks/")) {
+            showFeedback("✗ Webhook not configured.", "error");
+            submit.disabled = false;
+            btnLabel.textContent = "Send Message";
+            return;
+        }
+
         try {
             const res = await fetch(DISCORD_WEBHOOK_URL + "?wait=true", {
                 method: "POST",
