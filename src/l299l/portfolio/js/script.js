@@ -38,3 +38,71 @@ const navObserver = new IntersectionObserver(
 );
 
 sections.forEach((s) => navObserver.observe(s));
+
+// ── Contact form → Discord webhook ────────
+const DISCORD_WEBHOOK_URL = "__DISCORD_WEBHOOK_URL__";
+
+(function () {
+    const form     = document.getElementById("contact-form");
+    const submit   = document.getElementById("cf-submit");
+    const btnLabel = document.getElementById("cf-btn-label");
+    const feedback = document.getElementById("cf-feedback");
+
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const name    = document.getElementById("cf-name").value.trim();
+        const contact = document.getElementById("cf-contact").value.trim();
+        const type    = document.getElementById("cf-type").value;
+        const message = document.getElementById("cf-message").value.trim();
+
+        if (!name || !contact || !type || !message) {
+            showFeedback("Please fill in all fields.", "error");
+            return;
+        }
+
+        submit.disabled = true;
+        btnLabel.textContent = "Sending…";
+        feedback.className = "cf-feedback";
+
+        const payload = {
+            embeds: [{
+                title: "📬 New Contact Request",
+                color: 0x009a22,
+                fields: [
+                    { name: "👤 Name",          value: name,    inline: true },
+                    { name: "📧 Contact",        value: contact, inline: true },
+                    { name: "🔨 Project Type",   value: type,    inline: true },
+                    { name: "📝 Message",        value: message }
+                ],
+                timestamp: new Date().toISOString(),
+                footer: { text: "Leon's Portfolio · Contact Form" }
+            }]
+        };
+
+        try {
+            const res = await fetch(DISCORD_WEBHOOK_URL + "?wait=true", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload)
+            });
+
+            if (res.ok) {
+                showFeedback("✓ Message sent! I'll get back to you soon.", "success");
+                form.reset();
+            } else {
+                throw new Error(res.status);
+            }
+        } catch (_) {
+            showFeedback("✗ Couldn't send. Try reaching me directly on Discord.", "error");
+        }
+
+        submit.disabled = false;
+        btnLabel.textContent = "Send Message";
+    });
+
+    function showFeedback(text, type) {
+        feedback.textContent = text;
+        feedback.className = "cf-feedback " + type;
+    }
+})();

@@ -442,3 +442,162 @@
     border-color: #5865f2;
     box-shadow: 0 0 22px rgba(88, 101, 242, 0.35);
 }
+
+/* ── Contact form ───────────────────────── */
+.contact-form {
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    text-align: left;
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-form::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--green), transparent);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+@media (max-width: 560px) {
+    .form-row { grid-template-columns: 1fr; }
+    .contact-form { padding: 22px 16px; }
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.form-label {
+    font-family: 'Dosis', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 2.5px;
+    font-weight: 700;
+    color: #4a7060;
+    text-transform: uppercase;
+}
+
+.form-input {
+    background: rgba(0, 0, 0, 0.28);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    padding: 11px 14px;
+    color: #e8f4f8;
+    font-family: 'Dosis', sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.form-input::placeholder {
+    color: #3a5260;
+}
+
+.form-input:focus {
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px rgba(0, 154, 34, 0.18);
+}
+
+.form-select {
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7' viewBox='0 0 10 7'%3E%3Cpath fill='none' stroke='%23009a22' stroke-width='1.5' d='M1 1l4 4 4-4'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 38px;
+}
+
+.form-select option {
+    background: var(--bg-dark);
+    color: #e8f4f8;
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+    line-height: 1.6;
+}
+
+.form-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 4px;
+}
+
+.cf-feedback {
+    font-family: 'Dosis', sans-serif;
+    font-size: 0.82rem;
+    letter-spacing: 1px;
+    padding: 8px 14px;
+    border-radius: 5px;
+    flex: 1;
+    min-height: 1em;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.cf-feedback.success {
+    opacity: 1;
+    background: rgba(0, 154, 34, 0.1);
+    border: 1px solid rgba(0, 154, 34, 0.3);
+    color: #55b86a;
+}
+
+.cf-feedback.error {
+    opacity: 1;
+    background: rgba(220, 50, 47, 0.08);
+    border: 1px solid rgba(220, 50, 47, 0.3);
+    color: #e06c75;
+}
+
+.form-submit {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 26px;
+    background: transparent;
+    border: 1px solid var(--green);
+    border-radius: 6px;
+    color: var(--green);
+    font-family: 'Dosis', sans-serif;
+    font-size: 0.88rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.25s, color 0.25s, box-shadow 0.25s, opacity 0.25s;
+}
+
+.form-submit:hover:not(:disabled) {
+    background: var(--green);
+    color: #fff;
+    box-shadow: 0 0 24px rgba(0, 154, 34, 0.35);
+}
+
+.form-submit:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}

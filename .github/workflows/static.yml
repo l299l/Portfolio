@@ -29,6 +29,10 @@ jobs:
           npm ci
           npm run build
 
+      - name: Inject secrets
+        run: |
+          sed -i "s|__DISCORD_WEBHOOK_URL__|${{ secrets.DISCORD_WEBHOOK_URL }}|g" src/l299l/portfolio/js/script.js
+
       - name: Prepare site
         run: |
           mkdir -p _site/dist
