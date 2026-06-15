@@ -93,7 +93,8 @@ const DISCORD_WEBHOOK_URL = "__DISCORD_WEBHOOK_URL__";
             } else {
                 throw new Error(res.status);
             }
-        } catch (_) {
+        } catch (err) {
+            console.error("[contact form]", err);
             showFeedback("✗ Couldn't send. Try reaching me directly on Discord.", "error");
         }
 
