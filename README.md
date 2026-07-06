@@ -11,7 +11,7 @@
 
 ---
 
-### 🚀 Featured Project
+### 🚀 Featured Projects
 
 **[New Bedwars](https://github.com/l299l/NewBedwars-Free)** — A modern, feature-rich Bedwars plugin for Paper servers.
 
@@ -24,6 +24,15 @@
 [![Hangar](https://img.shields.io/badge/Hangar-blue?style=flat)](https://hangar.papermc.io/l299l/New-Bedwars)
 [![Modrinth](https://img.shields.io/badge/Modrinth-green?style=flat)](https://modrinth.com/plugin/new-bedwars)
 [![GitHub](https://img.shields.io/badge/GitHub-black?style=flat&logo=github)](https://github.com/l299l/NewBedwars-Free)
+
+**[NPCSpeak](https://github.com/l299l/NPCSpeak)** — A Paper plugin that gives Minecraft NPCs real, in-character conversations powered by an LLM (local Ollama or any OpenAI-compatible API).
+
+- Local (Ollama) or hosted (OpenAI-compatible) LLM backends
+- Task system: negotiate, persuade, interrogate, quest, freeform
+- Independent AI evaluator confirms tasks before rewards fire
+- Per-player, per-NPC memory across sessions
+
+[![GitHub](https://img.shields.io/badge/GitHub-black?style=flat&logo=github)](https://github.com/l299l/NPCSpeak)
 
 ### 🗂️ Other Projects
 
