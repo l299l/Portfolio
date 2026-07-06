@@ -32,6 +32,9 @@
 - Independent AI evaluator confirms tasks before rewards fire
 - Per-player, per-NPC memory across sessions
 
+[![Spigot](https://img.shields.io/badge/SpigotMC-E8762C?style=flat&logoColor=white)](https://www.spigotmc.org/resources/)
+[![Hangar](https://img.shields.io/badge/Hangar-blue?style=flat)](https://hangar.papermc.io/l299l/NPCSpeak)
+[![Modrinth](https://img.shields.io/badge/Modrinth-green?style=flat)](https://modrinth.com/plugin/npcspeak)
 [![GitHub](https://img.shields.io/badge/GitHub-black?style=flat&logo=github)](https://github.com/l299l/NPCSpeak)
 
 ### 🗂️ Other Projects
@@ -60,8 +63,8 @@
 ### 📊 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=l299l&show_icons=true&hide_border=true&bg_color=1c2629&title_color=009a22&icon_color=009a22&text_color=b0c4cc" alt="Leon's GitHub stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=l299l&layout=compact&hide_border=true&bg_color=1c2629&title_color=009a22&text_color=b0c4cc" alt="Top Languages" />
+  <img src="./profile/stats.svg" alt="Leon's GitHub stats" />
+  <img src="./profile/top-langs.svg" alt="Top Languages" />
 </p>
 
 ---
