@@ -66,6 +66,24 @@
     ]
   },
   {
+    "icon": "bi-code-slash",
+    "title": "Test Project",
+    "legacy": false,
+    "description": "Just testing if site works fine",
+    "tags": [
+      "Java",
+      "C++",
+      "Python"
+    ],
+    "links": [
+      {
+        "label": "Link",
+        "icon": "bi-box-arrow-up-right",
+        "url": "https://www.spigotmc.org/resources/bettercontainers-1-7-x-1-16-x.88885/"
+      }
+    ]
+  },
+  {
     "icon": "bi-box-seam-fill",
     "title": "BetterContainers",
     "legacy": true,
@@ -82,24 +100,6 @@
       },
       {
         "label": "Spigot",
-        "icon": "bi-box-arrow-up-right",
-        "url": "https://www.spigotmc.org/resources/bettercontainers-1-7-x-1-16-x.88885/"
-      }
-    ]
-  },
-  {
-    "icon": "bi-code-slash",
-    "title": "Test Project",
-    "legacy": false,
-    "description": "Just testing if site works fine",
-    "tags": [
-      "Java",
-      "C++",
-      "Python"
-    ],
-    "links": [
-      {
-        "label": "Link",
         "icon": "bi-box-arrow-up-right",
         "url": "https://www.spigotmc.org/resources/bettercontainers-1-7-x-1-16-x.88885/"
       }
