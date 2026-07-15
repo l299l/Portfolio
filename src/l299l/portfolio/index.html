@@ -12,7 +12,6 @@
 </head>
 <body class="bg-[#232e33] text-white overflow-x-hidden">
 
-<!-- NAV -->
 <nav class="flex fixed top-0 left-0 right-0 bg-gray-950 drop-shadow z-50">
     <div class="flex items-center pl-1 pr-1 w-full h-12 text-white justify-center">
         <div class="links flex-row sm:flex font-dosis gap-7 text-[7px] very-small:text-[15px] sm:text-[13px] tracking-[4px] font-bold">
@@ -24,7 +23,6 @@
     </div>
 </nav>
 
-<!-- ── HERO ──────────────────────────────────────────── -->
 <div id="home" class="min-h-[100vh] text-white flex flex-col justify-center items-center relative">
     <div id="header-content" style="font-family: 'Loud noise Black Skew', sans-serif;">
         <div class="stack font-bold font-dosis tracking-[4px]" style="--stacks: 3;">
@@ -40,7 +38,6 @@
     </div>
 </div>
 
-<!-- ── ABOUT ─────────────────────────────────────────── -->
 <section id="about" class="py-28 px-6">
     <div class="max-w-5xl mx-auto">
 
@@ -49,7 +46,6 @@
         </h2>
 
         <div class="grid md:grid-cols-2 gap-14 items-center mb-20">
-            <!-- Avatar -->
             <div class="flex justify-center reveal-left">
                 <div class="avatar-ring">
                     <div class="avatar-inner">
@@ -59,7 +55,6 @@
                 </div>
             </div>
 
-            <!-- Bio -->
             <div class="reveal-right">
                 <p class="text-lg text-[#b0c4cc] leading-relaxed mb-5 font-dosis">
                     Hey, I'm <span class="text-[#009a22] font-bold">Leon</span> — an 18-year-old developer from
@@ -84,7 +79,6 @@
             </div>
         </div>
 
-        <!-- Skill cards grid -->
         <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
             <div class="skill-card reveal" style="--delay:0ms">
                 <i class="bi bi-filetype-java text-3xl text-[#009a22]"></i>
@@ -114,7 +108,6 @@
     </div>
 </section>
 
-<!-- ── PROJECTS ───────────────────────────────────────── -->
 <section id="projects" class="py-28 px-6 bg-[#1c2629]">
     <div class="max-w-5xl mx-auto">
 
@@ -122,70 +115,10 @@
             <span class="text-[#009a22]">&lt;</span> PROJECTS <span class="text-[#009a22]">/&gt;</span>
         </h2>
 
-        <div class="grid md:grid-cols-3 gap-6">
-
-            <div class="project-card reveal" style="--delay:0ms">
-                <div class="project-icon"><i class="bi bi-grid-3x3-gap-fill"></i></div>
-                <h3 class="project-title font-dosis">New Bedwars</h3>
-                <p class="project-desc font-dosis">
-                    A modern, feature-rich Bedwars plugin for Paper servers with multi-arena support,
-                    custom shops &amp; upgrades, configurable game phases, and multi-language scoreboards.
-                    Originally started in 2021, now publicly released.
-                </p>
-                <div class="project-tags">
-                    <span>Java</span><span>Paper</span><span>MySQL</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://github.com/l299l/NewBedwars-Free" target="_blank" rel="noopener" class="project-link"><i class="bi bi-github"></i> GitHub</a>
-                    <a href="https://www.spigotmc.org/resources/new-bedwars.136050/" target="_blank" rel="noopener" class="project-link"><i class="bi bi-box-arrow-up-right"></i> Spigot</a>
-                    <a href="https://hangar.papermc.io/l299l/New-Bedwars" target="_blank" rel="noopener" class="project-link"><i class="bi bi-box-arrow-up-right"></i> Hangar</a>
-                    <a href="https://modrinth.com/plugin/new-bedwars" target="_blank" rel="noopener" class="project-link"><i class="bi bi-box-arrow-up-right"></i> Modrinth</a>
-                </div>
-            </div>
-
-
-            <div class="project-card reveal" style="--delay:120ms">
-                <div class="project-icon"><i class="bi bi-robot"></i></div>
-                <h3 class="project-title font-dosis">NPCSpeak</h3>
-                <p class="project-desc font-dosis">
-                    A Paper plugin that gives Minecraft NPCs real, in-character conversations powered by
-                    an LLM (local Ollama or any OpenAI-compatible API), with a task system that negotiates,
-                    persuades, or interrogates and only fires rewards once an independent AI evaluator
-                    confirms the task was genuinely completed.
-                </p>
-                <div class="project-tags">
-                    <span>Java</span><span>Paper</span><span>LLM</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://github.com/l299l/NPCSpeak" target="_blank" rel="noopener" class="project-link"><i class="bi bi-github"></i> GitHub</a>
-                    <a href="https://www.spigotmc.org/resources/" target="_blank" rel="noopener" class="project-link"><i class="bi bi-box-arrow-up-right"></i> Spigot</a>
-                    <a href="https://hangar.papermc.io/l299l/NPCSpeak" target="_blank" rel="noopener" class="project-link"><i class="bi bi-box-arrow-up-right"></i> Hangar</a>
-                    <a href="https://modrinth.com/plugin/npcspeak" target="_blank" rel="noopener" class="project-link"><i class="bi bi-box-arrow-up-right"></i> Modrinth</a>
-                </div>
-            </div>
-
-            <div class="project-card reveal" style="--delay:240ms">
-                <div class="project-icon"><i class="bi bi-box-seam-fill"></i></div>
-                <h3 class="project-title font-dosis">BetterContainers <span class="text-xs text-[#3d5560] font-normal tracking-normal ml-1">[legacy]</span></h3>
-                <p class="project-desc font-dosis">
-                    Enhances chests and storage blocks with sorting, auto-stacking,
-                    container locking, and a clean custom GUI. Supports 1.7.x–1.16.x.
-                    No longer maintained.
-                </p>
-                <div class="project-tags">
-                    <span>Java</span><span>Spigot</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://github.com/l299l/BetterContainer" target="_blank" rel="noopener" class="project-link"><i class="bi bi-github"></i> GitHub</a>
-                    <a href="https://www.spigotmc.org/resources/bettercontainers-1-7-x-1-16-x.88885/" target="_blank" rel="noopener" class="project-link"><i class="bi bi-box-arrow-up-right"></i> Spigot</a>
-                </div>
-            </div>
-
-        </div>
+        <div id="projects-grid" class="grid md:grid-cols-3 gap-6"></div>
     </div>
 </section>
 
-<!-- ── CONTACT ────────────────────────────────────────── -->
 <section id="contact" class="py-28 px-6">
     <div class="max-w-3xl mx-auto text-center">
 
@@ -197,7 +130,6 @@
             Have a project in mind? Fill out the form and I'll get back to you.
         </p>
 
-        <!-- Contact Form -->
         <form id="contact-form" class="contact-form reveal" style="--delay:150ms" novalidate>
             <div class="form-row">
                 <div class="form-group">

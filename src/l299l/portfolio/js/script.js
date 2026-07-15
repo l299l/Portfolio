@@ -1,45 +1,96 @@
-// ── Hero background (random GIF) ──────────────────────
 const coverImages = ["img/cover1.gif", "img/cover2.gif"];
 document.getElementById("home").style.backgroundImage =
     "url(" + coverImages[Math.floor(Math.random() * coverImages.length)] + ")";
 
-// ── Scroll-reveal (IntersectionObserver) ──────────────
-const revealEls = document.querySelectorAll(".reveal, .reveal-left, .reveal-right");
+function escapeHtml(value) {
+    return String(value ?? "").replace(/[&<>"']/g, (char) => ({
+        "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+    }[char]));
+}
 
-const revealObserver = new IntersectionObserver(
-    (entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-            }
-        });
-    },
-    { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
-);
+function projectCardHtml(project, index) {
+    const legacyBadge = project.legacy
+        ? ' <span class="text-xs text-[#3d5560] font-normal tracking-normal ml-1">[legacy]</span>'
+        : "";
 
-revealEls.forEach((el) => revealObserver.observe(el));
+    const tags = project.tags
+        .map((tag) => `<span>${escapeHtml(tag)}</span>`)
+        .join("");
 
-// ── Active nav link on scroll ─────────────────────────
-const sections  = document.querySelectorAll("section[id], div[id]");
-const navLinks  = document.querySelectorAll(".nav-link");
+    const links = project.links
+        .map((link) => `<a href="${escapeHtml(link.url)}" target="_blank" rel="noopener" class="project-link"><i class="bi ${escapeHtml(link.icon)}"></i> ${escapeHtml(link.label)}</a>`)
+        .join("");
 
-const navObserver = new IntersectionObserver(
-    (entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                const id = entry.target.getAttribute("id");
-                navLinks.forEach((link) => {
-                    link.classList.toggle("active", link.getAttribute("href") === "#" + id);
-                });
-            }
-        });
-    },
-    { threshold: 0.45 }
-);
+    return `
+        <div class="project-card reveal" style="--delay:${index * 120}ms">
+            <div class="project-icon"><i class="bi ${escapeHtml(project.icon)}"></i></div>
+            <h3 class="project-title font-dosis">${escapeHtml(project.title)}${legacyBadge}</h3>
+            <p class="project-desc font-dosis">${escapeHtml(project.description)}</p>
+            <div class="project-tags">${tags}</div>
+            <div class="project-links">${links}</div>
+        </div>`;
+}
 
-sections.forEach((s) => navObserver.observe(s));
+async function renderProjects() {
+    const grid = document.getElementById("projects-grid");
+    if (!grid) return;
 
-// ── Contact form → Discord webhook ────────
+    try {
+        const res = await fetch("data/projects.json");
+        if (!res.ok) throw new Error(res.status);
+
+        const projects = await res.json();
+        grid.innerHTML = projects.map(projectCardHtml).join("");
+    } catch (err) {
+        console.error("[projects]", err);
+        grid.innerHTML = '<p class="text-[#7a9aaa] font-dosis col-span-full text-center">Couldn\'t load projects right now.</p>';
+    }
+}
+
+function initRevealObserver() {
+    const revealEls = document.querySelectorAll(".reveal, .reveal-left, .reveal-right");
+
+    const revealObserver = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        },
+        { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+    );
+
+    revealEls.forEach((el) => revealObserver.observe(el));
+}
+
+function initNavObserver() {
+    const sections = document.querySelectorAll("section[id], div[id]");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    const navObserver = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute("id");
+                    navLinks.forEach((link) => {
+                        link.classList.toggle("active", link.getAttribute("href") === "#" + id);
+                    });
+                }
+            });
+        },
+        { threshold: 0.45 }
+    );
+
+    sections.forEach((s) => navObserver.observe(s));
+}
+
+(async function () {
+    await renderProjects();
+    initRevealObserver();
+    initNavObserver();
+})();
+
 const DISCORD_WEBHOOK_URL = "__DISCORD_WEBHOOK_URL__";
 
 (function () {

@@ -1,0 +1,155 @@
+.token-input-wrap {
+    position: relative;
+}
+
+.token-input-wrap .form-input {
+    padding-right: 44px;
+}
+
+.token-toggle {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #4a7060;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 6px;
+    line-height: 1;
+    transition: color 0.25s;
+}
+
+.token-toggle:hover {
+    color: var(--green);
+}
+
+.form-submit.btn-sm {
+    padding: 7px 16px;
+    font-size: 0.78rem;
+    letter-spacing: 1px;
+}
+
+.edit-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.edit-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.edit-card-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #e8f4f8;
+}
+
+.edit-card-icon-preview {
+    font-size: 1.4rem;
+    color: var(--green);
+    width: 26px;
+    text-align: center;
+}
+
+.edit-card-actions {
+    display: flex;
+    gap: 6px;
+}
+
+.icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    color: #8fa5ad;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.icon-btn:hover:not(:disabled) {
+    border-color: var(--green);
+    color: var(--green);
+}
+
+.icon-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.icon-btn.danger:hover:not(:disabled) {
+    border-color: #dc322f;
+    color: #e06c75;
+}
+
+.edit-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+@media (max-width: 640px) {
+    .edit-grid { grid-template-columns: 1fr; }
+}
+
+.checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Dosis', sans-serif;
+    font-size: 0.85rem;
+    color: #8fa5ad;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+
+.checkbox-row input {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--green);
+    cursor: pointer;
+}
+
+.links-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.link-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr auto;
+    gap: 10px;
+    align-items: center;
+}
+
+@media (max-width: 640px) {
+    .link-row { grid-template-columns: 1fr; }
+}
+
+.link-row .form-input {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+}
+
+.add-link-btn {
+    align-self: flex-start;
+}

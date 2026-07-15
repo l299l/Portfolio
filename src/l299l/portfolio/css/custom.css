@@ -1,7 +1,3 @@
-/* ═══════════════════════════════════════════
-   Custom styles — Leon's Portfolio
-═══════════════════════════════════════════ */
-
 :root {
     --green:      #009a22;
     --green-dim:  #006b17;
@@ -12,7 +8,6 @@
     --text-sec:   #b0c4cc;
 }
 
-/* ── Scrollbar ──────────────────────────── */
 ::-webkit-scrollbar { width: 8px; height: 10px; }
 ::-webkit-scrollbar-button { display: none; }
 ::-webkit-scrollbar-track { background-color: #646464; }
@@ -21,7 +16,6 @@
 ::-webkit-scrollbar-corner { background-color: #646464; }
 ::-webkit-resizer { background-color: #666; }
 
-/* ── Hero background ────────────────────── */
 #home {
     background-size: cover;
     background-image: url("../img/cover1.gif");
@@ -35,7 +29,6 @@
     z-index: 1;
 }
 
-/* ── Glitch stack ───────────────────────── */
 .stack {
     display: grid;
 }
@@ -71,7 +64,6 @@
     4%, 100%{ text-shadow: none; transform: none; }
 }
 
-/* ── Hero subtitle ──────────────────────── */
 .subtitle {
     margin-top: 10px;
     opacity: 0;
@@ -85,7 +77,6 @@
     to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ── Scroll-down arrow ──────────────────── */
 .scroll-down {
     display: flex;
     flex-direction: column;
@@ -116,7 +107,6 @@
     100% { opacity: 0; }
 }
 
-/* ── Navigation ─────────────────────────── */
 .nav-link {
     display: inline-block;
     position: relative;
@@ -148,7 +138,6 @@
     transform-origin: bottom left;
 }
 
-/* ── Section dividers ───────────────────── */
 #about,
 #projects,
 #contact {
@@ -168,7 +157,6 @@
     opacity: 0.4;
 }
 
-/* ── Section titles ─────────────────────── */
 .section-title {
     display: inline-block;
     position: relative;
@@ -191,7 +179,6 @@
     width: 55%;
 }
 
-/* ── Reveal scroll animations ───────────── */
 .reveal,
 .reveal-left,
 .reveal-right {
@@ -211,7 +198,6 @@
     transform: translate(0, 0);
 }
 
-/* ── Avatar ─────────────────────────────── */
 .avatar-ring {
     width: 200px;
     height: 200px;
@@ -262,7 +248,6 @@
     to   { transform: rotate(360deg); }
 }
 
-/* ── Skill tags (inline chips) ──────────── */
 .skill-tag {
     display: inline-flex;
     align-items: center;
@@ -286,7 +271,6 @@
     box-shadow: 0 0 12px var(--green-glow);
 }
 
-/* ── Skill grid cards ───────────────────── */
 .skill-card {
     display: flex;
     flex-direction: column;
@@ -311,7 +295,6 @@
     color: #fff;
 }
 
-/* ── Project cards ──────────────────────── */
 .project-card {
     background: var(--card-bg);
     border: 1px solid rgba(255, 255, 255, 0.05);
@@ -415,7 +398,6 @@
     color: var(--green);
 }
 
-/* ── Contact icons ──────────────────────── */
 .contact-icon {
     display: flex;
     align-items: center;
@@ -443,7 +425,6 @@
     box-shadow: 0 0 22px rgba(88, 101, 242, 0.35);
 }
 
-/* ── Contact form ───────────────────────── */
 .contact-form {
     background: var(--card-bg);
     border: 1px solid rgba(255, 255, 255, 0.05);
