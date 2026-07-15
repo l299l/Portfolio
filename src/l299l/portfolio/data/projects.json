@@ -4,12 +4,32 @@
     "title": "New Bedwars",
     "legacy": false,
     "description": "A modern, feature-rich Bedwars plugin for Paper servers with multi-arena support, custom shops & upgrades, configurable game phases, and multi-language scoreboards. Originally started in 2021, now publicly released.",
-    "tags": ["Java", "Paper", "MySQL"],
+    "tags": [
+      "Java",
+      "Paper",
+      "MySQL"
+    ],
     "links": [
-      { "label": "GitHub", "icon": "bi-github", "url": "https://github.com/l299l/NewBedwars-Free" },
-      { "label": "Spigot", "icon": "bi-box-arrow-up-right", "url": "https://www.spigotmc.org/resources/new-bedwars.136050/" },
-      { "label": "Hangar", "icon": "bi-box-arrow-up-right", "url": "https://hangar.papermc.io/l299l/New-Bedwars" },
-      { "label": "Modrinth", "icon": "bi-box-arrow-up-right", "url": "https://modrinth.com/plugin/new-bedwars" }
+      {
+        "label": "GitHub",
+        "icon": "bi-github",
+        "url": "https://github.com/l299l/NewBedwars-Free"
+      },
+      {
+        "label": "Spigot",
+        "icon": "bi-box-arrow-up-right",
+        "url": "https://www.spigotmc.org/resources/new-bedwars.136050/"
+      },
+      {
+        "label": "Hangar",
+        "icon": "bi-box-arrow-up-right",
+        "url": "https://hangar.papermc.io/l299l/New-Bedwars"
+      },
+      {
+        "label": "Modrinth",
+        "icon": "bi-box-arrow-up-right",
+        "url": "https://modrinth.com/plugin/new-bedwars"
+      }
     ]
   },
   {
@@ -17,12 +37,50 @@
     "title": "NPCSpeak",
     "legacy": false,
     "description": "A Paper plugin that gives Minecraft NPCs real, in-character conversations powered by an LLM (local Ollama or any OpenAI-compatible API), with a task system that negotiates, persuades, or interrogates and only fires rewards once an independent AI evaluator confirms the task was genuinely completed.",
-    "tags": ["Java", "Paper", "LLM"],
+    "tags": [
+      "Java",
+      "Paper",
+      "LLM"
+    ],
     "links": [
-      { "label": "GitHub", "icon": "bi-github", "url": "https://github.com/l299l/NPCSpeak" },
-      { "label": "Spigot", "icon": "bi-box-arrow-up-right", "url": "https://www.spigotmc.org/resources/" },
-      { "label": "Hangar", "icon": "bi-box-arrow-up-right", "url": "https://hangar.papermc.io/l299l/NPCSpeak" },
-      { "label": "Modrinth", "icon": "bi-box-arrow-up-right", "url": "https://modrinth.com/plugin/npcspeak" }
+      {
+        "label": "GitHub",
+        "icon": "bi-github",
+        "url": "https://github.com/l299l/NPCSpeak"
+      },
+      {
+        "label": "Spigot",
+        "icon": "bi-box-arrow-up-right",
+        "url": "https://www.spigotmc.org/resources/"
+      },
+      {
+        "label": "Hangar",
+        "icon": "bi-box-arrow-up-right",
+        "url": "https://hangar.papermc.io/l299l/NPCSpeak"
+      },
+      {
+        "label": "Modrinth",
+        "icon": "bi-box-arrow-up-right",
+        "url": "https://modrinth.com/plugin/npcspeak"
+      }
+    ]
+  },
+  {
+    "icon": "bi-code-slash",
+    "title": "Test Project",
+    "legacy": false,
+    "description": "Just testing if site works fine",
+    "tags": [
+      "Java",
+      "C++",
+      "Python"
+    ],
+    "links": [
+      {
+        "label": "Link",
+        "icon": "bi-box-arrow-up-right",
+        "url": "https://www.spigotmc.org/resources/bettercontainers-1-7-x-1-16-x.88885/"
+      }
     ]
   },
   {
@@ -30,10 +88,21 @@
     "title": "BetterContainers",
     "legacy": true,
     "description": "Enhances chests and storage blocks with sorting, auto-stacking, container locking, and a clean custom GUI. Supports 1.7.x–1.16.x. No longer maintained.",
-    "tags": ["Java", "Spigot"],
+    "tags": [
+      "Java",
+      "Spigot"
+    ],
     "links": [
-      { "label": "GitHub", "icon": "bi-github", "url": "https://github.com/l299l/BetterContainer" },
-      { "label": "Spigot", "icon": "bi-box-arrow-up-right", "url": "https://www.spigotmc.org/resources/bettercontainers-1-7-x-1-16-x.88885/" }
+      {
+        "label": "GitHub",
+        "icon": "bi-github",
+        "url": "https://github.com/l299l/BetterContainer"
+      },
+      {
+        "label": "Spigot",
+        "icon": "bi-box-arrow-up-right",
+        "url": "https://www.spigotmc.org/resources/bettercontainers-1-7-x-1-16-x.88885/"
+      }
     ]
   }
 ]
