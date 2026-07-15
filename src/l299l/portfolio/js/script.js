@@ -36,7 +36,7 @@ async function renderProjects() {
     if (!grid) return;
 
     try {
-        const res = await fetch("data/projects.json");
+        const res = await fetch("data/projects.json", { cache: "no-store" });
         if (!res.ok) throw new Error(res.status);
 
         const projects = await res.json();
