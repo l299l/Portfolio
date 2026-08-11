@@ -49,16 +49,6 @@
         "url": "https://github.com/l299l/NPCSpeak"
       },
       {
-        "label": "Spigot",
-        "icon": "bi-box-arrow-up-right",
-        "url": "https://www.spigotmc.org/resources/"
-      },
-      {
-        "label": "Hangar",
-        "icon": "bi-box-arrow-up-right",
-        "url": "https://hangar.papermc.io/l299l/NPCSpeak"
-      },
-      {
         "label": "Modrinth",
         "icon": "bi-box-arrow-up-right",
         "url": "https://modrinth.com/plugin/npcspeak"
