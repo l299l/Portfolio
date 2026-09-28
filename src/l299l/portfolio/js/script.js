@@ -66,7 +66,7 @@ function initRevealObserver() {
 
 function initNavObserver() {
     const sections = document.querySelectorAll("section[id], div[id]");
-    const navLinks = document.querySelectorAll(".nav-link");
+    const navLinks = document.querySelectorAll(".nav-link, .nav-link-mobile");
 
     const navObserver = new IntersectionObserver(
         (entries) => {
@@ -85,10 +85,51 @@ function initNavObserver() {
     sections.forEach((s) => navObserver.observe(s));
 }
 
+function initMobileMenu() {
+    const menuBtn = document.getElementById("mobile-menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const mobileLinks = document.querySelectorAll(".nav-link-mobile");
+    
+    if (!menuBtn || !mobileMenu) return;
+    
+    menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("show");
+        const icon = menuBtn.querySelector("i");
+        if (mobileMenu.classList.contains("show")) {
+            icon.classList.remove("bi-list");
+            icon.classList.add("bi-x");
+        } else {
+            icon.classList.remove("bi-x");
+            icon.classList.add("bi-list");
+        }
+    });
+    
+    // Close menu when clicking on a link
+    mobileLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+            mobileMenu.classList.remove("show");
+            const icon = menuBtn.querySelector("i");
+            icon.classList.remove("bi-x");
+            icon.classList.add("bi-list");
+        });
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener("click", (e) => {
+        if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+            mobileMenu.classList.remove("show");
+            const icon = menuBtn.querySelector("i");
+            icon.classList.remove("bi-x");
+            icon.classList.add("bi-list");
+        }
+    });
+}
+
 (async function () {
     await renderProjects();
     initRevealObserver();
     initNavObserver();
+    initMobileMenu();
 })();
 
 const DISCORD_WEBHOOK_URL = "__DISCORD_WEBHOOK_URL__";
