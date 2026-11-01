@@ -16,16 +16,6 @@
         "url": "https://github.com/l299l/NewBedwars-Free"
       },
       {
-        "label": "Spigot",
-        "icon": "bi-box-arrow-up-right",
-        "url": "https://www.spigotmc.org/resources/new-bedwars.136050/"
-      },
-      {
-        "label": "Hangar",
-        "icon": "bi-box-arrow-up-right",
-        "url": "https://hangar.papermc.io/l299l/New-Bedwars"
-      },
-      {
         "label": "Modrinth",
         "icon": "bi-box-arrow-up-right",
         "url": "https://modrinth.com/plugin/new-bedwars"
@@ -74,6 +64,26 @@
         "label": "Spigot",
         "icon": "bi-box-arrow-up-right",
         "url": "https://www.spigotmc.org/resources/bettercontainers-1-7-x-1-16-x.88885/"
+      }
+    ]
+  },
+  {
+    "icon": "bi bi-flask",
+    "title": "McPluginLab",
+    "legacy": false,
+    "description": "Desktop workbench for testing Minecraft plugins. It runs Paper, Spigot and Velocity/BungeeCord networks with live consoles, auto-deploys your plugin builds, and adds SoulFire bots, a built-in client and an MCP server for AI-driven testing.",
+    "tags": [
+      "Kotlin",
+      "Testing",
+      "Paper",
+      "Velocity",
+      "MCP"
+    ],
+    "links": [
+      {
+        "label": "GitHub",
+        "icon": "bi-github",
+        "url": "https://github.com/l299l/McPluginLab"
       }
     ]
   }
