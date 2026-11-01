@@ -68,7 +68,7 @@
     ]
   },
   {
-    "icon": "bi bi-flask",
+    "icon": "bi-flask-fill",
     "title": "McPluginLab",
     "legacy": false,
     "description": "Desktop workbench for testing Minecraft plugins. It runs Paper, Spigot and Velocity/BungeeCord networks with live consoles, auto-deploys your plugin builds, and adds SoulFire bots, a built-in client and an MCP server for AI-driven testing.",
