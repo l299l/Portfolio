@@ -13,6 +13,17 @@
 
 ### 🚀 Featured Projects
 
+**[McPluginLab](https://github.com/l299l/mcpluginlab)** — A workbench for testing Minecraft plugins: servers, proxies, plugin auto-deploy, bots and a game client in one app, driven from a desktop GUI, the command line or an AI agent.
+
+- Paper, Purpur, Folia & Spigot servers in seconds
+- Self-configuring Velocity, Waterfall & BungeeCord networks
+- Plugin auto-deploy on every build
+- SoulFire bots & built-in offline Minecraft launcher
+- MCP server so AI agents like Claude Code can run tests
+
+[![Release](https://img.shields.io/github/v/release/l299l/mcpluginlab?color=7DD3A0)](https://github.com/l299l/mcpluginlab/releases/latest)
+[![GitHub](https://img.shields.io/badge/GitHub-black?style=flat&logo=github)](https://github.com/l299l/mcpluginlab)
+
 **[New Bedwars](https://github.com/l299l/NewBedwars-Free)** — A modern, feature-rich Bedwars plugin for Paper servers.
 
 - Multi-arena support
@@ -20,8 +31,6 @@
 - Configurable game phases
 - Multi-language scoreboards
 
-[![Spigot](https://img.shields.io/badge/SpigotMC-E8762C?style=flat&logoColor=white)](https://www.spigotmc.org/resources/new-bedwars.136050/)
-[![Hangar](https://img.shields.io/badge/Hangar-blue?style=flat)](https://hangar.papermc.io/l299l/New-Bedwars)
 [![Modrinth](https://img.shields.io/badge/Modrinth-green?style=flat)](https://modrinth.com/plugin/new-bedwars)
 [![GitHub](https://img.shields.io/badge/GitHub-black?style=flat&logo=github)](https://github.com/l299l/NewBedwars-Free)
 
@@ -48,6 +57,7 @@
 
 <p align="left">
   <a href="https://www.java.com" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/></a>
+  <a href="https://kotlinlang.org" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/kotlin/kotlin-original.svg" alt="kotlin" width="40" height="40"/></a>
   <a href="https://www.w3schools.com/cpp/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="40" height="40"/></a>
   <a href="https://git-scm.com/" target="_blank"><img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/></a>
   <a href="https://www.mysql.com/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/></a>
